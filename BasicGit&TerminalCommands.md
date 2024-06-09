@@ -1,4 +1,7 @@
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/121px-Python-logo-notext.svg.png" align="left" >
+
 ### Temel Git Komutları
+<br><br>
 
 1. **git init**: Yeni bir Git deposu oluşturur.
    ```sh
@@ -145,7 +148,12 @@
 1. **Fork**: GitHub'da bir projeyi fork edin (klonlayın).
 2. **Pull Request**: Değişikliklerinizi orijinal depo sahibine geri gönderin. GitHub arayüzü üzerinden yapılır.
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Terminalicon2.png"  height="120" width="120" align="left" >
+
+
 ## Temel Terminal Komutları 
+
+<br><br>
 
 ### 1. `ls`
 **Açıklama:** Klasör içeriğini listelemek için kullanılır.
