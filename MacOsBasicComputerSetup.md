@@ -3,6 +3,21 @@
 ## MacOs Temiz Kurulum Rehberi
 <img src="https://developer.apple.com/macos/images/lockup-hero-large_2x.png" >
 
+### Adım : Mac Ayarları 
+
+#### Dock Hızını Artırma 
+
+```sh
+defaults write com.apple.dock autohide-delay -float 0
+killall Dock
+```
+
+- Ayarı Geri Varsayılana döndürme
+```sh
+defaults delete com.apple.dock autohide-delay
+killall Dock
+```
+
 ### Adım 1: Homebrew Kurulumu
 <img src="https://brew.sh/assets/img/homebrew.svg" align="left" height="120" width="120">
 
