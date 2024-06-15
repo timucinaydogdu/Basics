@@ -277,6 +277,22 @@ https://apps.apple.com/us/app/hand-mirror/id1502839586?mt=12
 ```
 <br><br>
 
+**20. KDE Live Kurulumu:**
+<img src="https://kdenlive.org/wp-content/uploads/2024/05/2405.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask kdenlive
+```
+<br><br>
+
+**21. Audacity Kurulumu:**
+<img src="https://www.audacityteam.org/_astro/Audacity_Logo.63b57726.svg" align="left" height="120" width="120">
+
+```sh
+brew install --cask audacity
+```
+<br><br>
+
 ### Adım 1: iTerm2 Kurulumu
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/ITerm2_v3.4_icon.png" align="left" height="120" width="120">
 <br>
