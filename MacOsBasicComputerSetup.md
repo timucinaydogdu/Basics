@@ -1,11 +1,69 @@
 
 # Temel Bilim Ve Teknoloji Notları
+
 ## MacOs Temiz Kurulum Rehberi
 <img src="https://developer.apple.com/macos/images/lockup-hero-large_2x.png" >
 
 ### Adım : Mac Ayarları 
 
-#### Dock Hızını Artırma 
+##  MacOs Temiz Kurulum Rehberi
+
+- [OS Settings](#os-settings)
+  - [Desktop](#desktop)
+  - [Finder](#finder)
+  - [Dock](#dock)
+  - [Dock Speed Up Settings](#Dock-Speed-Up-Settings) 
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## OS Settings
+
+These are my preferred settings for `Desktop`, `Finder` and the `Dock`.
+
+### Desktop
+
+I don't like the new Desktop, Stage Manager or Widget features in Sonoma, so I disable them.
+
+* System Preferences
+  * Desktop & Dock
+    * Desktop & Stage Manager
+      * Show Items
+        * On Desktop -> uncheck
+        * In Stage Manager -> uncheck
+      * Click wallpaper to reveal desktop -> Only in Stage Manager
+      * Stage Manager -> uncheck
+      * Widgets
+        * On Desktop -> uncheck
+        * In Stage Manager -> uncheck
+
+### Finder
+
+* Finder -> Preferences
+  * General -> Show these on the desktop -> Select None
+      * I try to keep my desktop completely clean.
+  * General -> New Finder windows show -> Home Folder
+      * I prefer to see my home folder in each new finder window instead of recent documents
+  * Advanced -> Show all filename extensions -> Yes
+  * Advanced -> Show warning before changing an extension -> No
+  * Advanced -> When performing a search -> Search the current folder
+* View
+  * Show Status Bar
+  * Show Path Bar
+  * Show Tab Bar
+
+### Dock
+
+I don't use the Dock at all. It takes up screen space, and I can use RayCast to launch apps and AltTab to switch between apps. I make the dock as small as possible and auto hide it.
+
+* System Preferences
+  * Desktop & Dock
+    * Size -> Small as possible
+    * Position on screen -> Left
+    * Automatically hide and show the Dock -> Yes
+    * Animate opening applications -> No
+    * Show suggested and recent apps in the Dock -> No
+
+### Dock Speed Up Settings
 
 ```sh
 defaults write com.apple.dock autohide-delay -float 0
@@ -60,6 +118,11 @@ brew install git
 
 #### Adım 1.1 : GitHub Hesap Bağlantısı İçin Ayarlar
 GitHub hesabınızı Git ile bağlamak için aşağıdaki adımları izleyin:
+
+### Github SSH Setup
+
+* Follow [this guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to setup an ssh key for github
+* Follow [this guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to add the ssh key to your github account
 
 **1. Git Konfigürasyonu:**
 GitHub hesabınızla Git'i yapılandırmak için aşağıdaki komutları kullanın, `<your-name>` ve `<your-email>` alanlarını kendi bilgilerinizle değiştirin:
@@ -161,6 +224,12 @@ brew install node
 brew install --cask visual-studio-code
 ```
 <br><br>
+
+## VS Code
+
+VS Code is my preferred code editor.
+
+You can view all of my VS Code settings / extensions [here](https://github.com/CodingGarden/vscode-settings).
 
 **5. Java Kurulumu:**
 <img src="https://res.cloudinary.com/lwgatsby/f_auto/www/uploads/2020/08/openjdklogo.082620.png" align="left" height="120" width="120">
@@ -293,6 +362,73 @@ brew install --cask audacity
 ```
 <br><br>
 
+**22. Libre Office Kurulumu:**
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/LibreOffice_6.1_Calc_Icon.svg/512px-LibreOffice_6.1_Calc_Icon.svg.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask libreoffice
+```
+<br><br>
+
+**23. Android File Trasfer Kurulumu:**
+<img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/android-file-transfer-icon.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask android-file-transfer
+```
+<br><br>
+
+**24. Keeping You Awake Kurulumu:**
+<img src="https://keepingyouawake.app/icon.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask keepingyouawake
+```
+<br><br>
+
+**25. VLC Player Kurulumu:**
+<img src="https://cdn1.iconfinder.com/data/icons/metro-ui-dock-icon-set--icons-by-dakirby/512/VLC_Media_Player.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask vlc
+```
+<br><br>
+
+**26. Keka Kurulumu:**
+<img src="https://www.keka.io/img/Keka-Square-512x512.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask keka
+```
+<br><br>
+
+**27. Kap Kurulumu:**
+<img src="https://getkap.co/static/favicon/icon-256.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask kap
+```
+<br><br>
+
+**28. Figma Kurulumu:**
+<img src="https://banner2.cleanpng.com/20180614/tjk/kisspng-figma-designer-computer-icons-material-design-5b2244f198c236.1471924315289725296257.jpg" align="left" height="120" width="120">
+
+```sh
+brew install --cask figma
+```
+<br><br>
+
+
+#### Other command line tools I use
+
+* [ffmpeg](https://en.wikipedia.org/wiki/FFmpeg) - edit videos from the command line
+* [imagemagick](https://en.wikipedia.org/wiki/ImageMagick) - edit images from the command line
+
+```sh
+brew install ffmpeg
+brew install imagemagick
+```
+
 ### Adım 1: iTerm2 Kurulumu
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/ITerm2_v3.4_icon.png" align="left" height="120" width="120">
 <br>
@@ -301,6 +437,39 @@ brew install --cask audacity
 brew install --cask iterm2
 ```
 <br>
+
+## Terminal
+
+I prefer [iTerm2](https://iterm2.com/) because:
+* Lots of customization options
+* Clickable links
+* Native OS notifications
+
+There are a lot of options for a terminal replacement, but I've been using iTerm2 for years and it works great for my needs.
+
+Checkout their documentation for more info on what iTerm2 can do: [https://iterm2.com/documentation.html](https://iterm2.com/documentation.html)
+
+
+```
+brew install iterm2
+```
+
+Once installed, launch it and customize the settings / preferences to your liking. These are my preferred settings:
+
+* Appearance
+  * Theme
+    * Minimal
+* Profiles
+  * Default
+      * General -> Working Directory -> Reuse previous session's directory
+      * Colors -> Basic Colors -> Foreground -> Lime Green
+      * Text -> Font -> Anonymous Pro
+          * You can download this font [here](https://www.marksimonson.com/fonts/view/anonymous-pro).
+          * I use this font in VS Code as well
+      * Text -> Font Size -> 36
+          * I use my Macbook to present / teach, so a big font size is important so everyone can see the commands I'm typing
+      * Keys -> Key Mappings -> Presets -> Natural Text Editing
+          * This allows me to use the [keyboard shortcuts](https://gist.github.com/w3cj/022081eda22081b82c52) I know and love inside of iTerm2
 
 ### Adım 2: Zsh Kurulumu
 Zsh, macOS ile birlikte gelir, ancak en son sürümü kullanmak için yine de Homebrew ile yükleyebilirsiniz:
