@@ -1,20 +1,84 @@
-
-# Temel Bilim Ve Teknoloji Notları
-
-## MacOs Temiz Kurulum Rehberi
+## MacOs Clean Setup
 <img src="https://developer.apple.com/macos/images/lockup-hero-large_2x.png" >
 
-### Adım : Mac Ayarları 
+### Route Steps : Mac Settings 
 
-##  MacOs Temiz Kurulum Rehberi
-
+- [MacOs Clean Setup](#macos-clean-setup)
+  - [Route Steps : Mac Settings](#route-steps--mac-settings)
 - [OS Settings](#os-settings)
   - [Desktop](#desktop)
   - [Finder](#finder)
   - [Dock](#dock)
-  - [Dock Speed Up Settings](#Dock-Speed-Up-Settings) 
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+  - [Dock Speed Up Settings](#dock-speed-up-settings)
+  - [Homebrew Setup](#homebrew-setup)
+  - [Home Brew PATH Settings](#home-brew-path-settings)
+  - [Homebrew Update](#homebrew-update)
+  - [App List](#app-list)
+    - [Git Setup](#git-setup)
+      - [Github SSH Setup](#github-ssh-setup)
+      - [Git Configuration](#git-configuration)
+      - [SSH Key Creating](#ssh-key-creating)
+      - [Adding SSH Key In GitHub Account](#adding-ssh-key-in-github-account)
+      - [SSH Connetion Test](#ssh-connetion-test)
+      - [System Repair And Clean](#system-repair-and-clean)
+    - [Python Setup](#python-setup)
+      - [Python Pip And Flask Setup Steps](#python-pip-and-flask-setup-steps)
+    - [Node.js And Npm Setup](#nodejs-and-npm-setup)
+    - [R Setup](#r-setup)
+    - [Julia Setup](#julia-setup)
+    - [Visual Studio Code Setup](#visual-studio-code-setup)
+      - [VS Code Settings And Extensions](#vs-code-settings-and-extensions)
+    - [Java Setup](#java-setup)
+    - [Brave Browser Setup](#brave-browser-setup)
+    - [Spotify Setup](#spotify-setup)
+    - [Raycast Setup](#raycast-setup)
+    - [WhatsApp Desktop Setup](#whatsapp-desktop-setup)
+    - [Zoom Setup](#zoom-setup)
+    - [Slack Setup](#slack-setup)
+    - [Discord Setup](#discord-setup)
+    - [Xcode Setup](#xcode-setup)
+    - [FreeDownload Manager Setup](#freedownload-manager-setup)
+    - [Monitor Control Setup](#monitor-control-setup)
+    - [Alt Tab Setup](#alt-tab-setup)
+    - [Al Dente Setup](#al-dente-setup)
+    - [KDE Live Setup](#kde-live-setup)
+    - [Audacity Setup](#audacity-setup)
+    - [Libre Office Setup](#libre-office-setup)
+    - [Android File Trasfer Setup](#android-file-trasfer-setup)
+    - [Keeping You Awake Setup](#keeping-you-awake-setup)
+    - [VLC Player Setup](#vlc-player-setup)
+    - [Keka Setup](#keka-setup)
+    - [Kap Screen Recorder Setup](#kap-screen-recorder-setup)
+    - [Figma Setup](#figma-setup)
+    - [Hand Mirror Webcam Helper Setup](#hand-mirror-webcam-helper-setup)
+    - [Other command line tools I use](#other-command-line-tools-i-use)
+    - [iTerm2 Terminal Setup](#iterm2-terminal-setup)
+    - [Zsh Setup](#zsh-setup)
+    - [Make ZSH Default Shell](#make-zsh-default-shell)
+    - [Oh My Zsh Setup](#oh-my-zsh-setup)
+    - [Powerlevel10k Theme Setup](#powerlevel10k-theme-setup)
+    - [ZSH Eklentileri](#zsh-eklentileri)
+  - [1. zsh-autosuggestions](#1-zsh-autosuggestions)
+  - [2. zsh-syntax-highlighting](#2-zsh-syntax-highlighting)
+  - [3. zsh-completions](#3-zsh-completions)
+  - [4. z](#4-z)
+  - [5. git](#5-git)
+  - [6. zsh-history-substring-search](#6-zsh-history-substring-search)
+  - [7. zsh-nvm](#7-zsh-nvm)
+  - [8. zsh-interactive-cd](#8-zsh-interactive-cd)
+  - [9. zsh-docker-aliases](#9-zsh-docker-aliases)
+  - [10. autojump](#10-autojump)
+  - [11. zsh-dirhistory](#11-zsh-dirhistory)
+  - [12. zsh-extract](#12-zsh-extract)
+  - [13. zsh-navigation-tools](#13-zsh-navigation-tools)
+  - [14. zsh-vi-mode](#14-zsh-vi-mode)
+  - [15. zsh-you-should-use](#15-zsh-you-should-use)
+  - [16. zsh-prompt-benchmark](#16-zsh-prompt-benchmark)
+  - [17. zsh-auto-notify](#17-zsh-auto-notify)
+  - [18. zsh-apple-touchbar](#18-zsh-apple-touchbar)
+  - [19. zsh-histdb](#19-zsh-histdb)
+  - [20. zsh-peco](#20-zsh-peco)
+    - [System Repair And Clean](#system-repair-and-clean-1)
 
 ## OS Settings
 
@@ -65,18 +129,19 @@ I don't use the Dock at all. It takes up screen space, and I can use RayCast to 
 
 ### Dock Speed Up Settings
 
+- Speed Up
 ```sh
 defaults write com.apple.dock autohide-delay -float 0
 killall Dock
 ```
 
-- Ayarı Geri Varsayılana döndürme
+- Revert Default Value
 ```sh
 defaults delete com.apple.dock autohide-delay
 killall Dock
 ```
 
-### Adım 1: Homebrew Kurulumu
+### Homebrew Setup
 <img src="https://brew.sh/assets/img/homebrew.svg" align="left" height="120" width="120">
 
 
@@ -87,7 +152,7 @@ killall Dock
 ```
 <br>
 
-### Adım 2: PATH Ayarlarını Güncelleme
+### Home Brew PATH Settings
 Homebrew kurulumundan sonra, PATH değişkeninizi güncellemeniz gerekebilir. Bunun için aşağıdaki komutu girin:
 
 ```sh
@@ -95,7 +160,7 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-### Adım 3: Homebrew Güncelleme
+### Homebrew Update
 Homebrew'u güncelleyin ve hazır hale getirin:
 
 ```sh
@@ -103,10 +168,10 @@ brew update
 brew upgrade
 ```
 
-### Adım 4: Gerekli Uygulamaların Kurulumu
+### App List
 Şimdi, kullandığınız uygulamalara göre gerekli olanları yükleyelim.
 
-**1. Git Kurulumu:**
+#### Git Setup
 
 <img src="https://avatars.githubusercontent.com/u/18133?s=200&v=4" align="left" height="120" width="120">
 <br>
@@ -116,15 +181,11 @@ brew install git
 ```
 <br>
 
-#### Adım 1.1 : GitHub Hesap Bağlantısı İçin Ayarlar
-GitHub hesabınızı Git ile bağlamak için aşağıdaki adımları izleyin:
-
-### Github SSH Setup
-
+##### Github SSH Setup
 * Follow [this guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to setup an ssh key for github
 * Follow [this guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) to add the ssh key to your github account
 
-**1. Git Konfigürasyonu:**
+##### Git Configuration
 GitHub hesabınızla Git'i yapılandırmak için aşağıdaki komutları kullanın, `<your-name>` ve `<your-email>` alanlarını kendi bilgilerinizle değiştirin:
 
 ```sh
@@ -132,7 +193,7 @@ git config --global user.name "your-name"
 git config --global user.email "your-email"
 ```
 
-**2. SSH Anahtarı Oluşturma:**
+##### SSH Key Creating
 Eğer GitHub hesabınızda SSH anahtarı kullanmak istiyorsanız, aşağıdaki komutu kullanarak yeni bir SSH anahtarı oluşturun:
 
 ```sh
@@ -141,7 +202,8 @@ ssh-keygen -t ed25519 -C "your-email"
 
 Komut size birkaç soru soracaktır; hepsini varsayılan olarak bırakabilirsiniz.
 
-**3. SSH Anahtarını GitHub Hesabınıza Ekleyin:**
+##### Adding SSH Key In GitHub Account
+
 Oluşturulan SSH anahtarını GitHub hesabınıza eklemek için aşağıdaki adımları izleyin:
 
 - Terminal'de aşağıdaki komutu çalıştırarak SSH anahtarınızı kopyalayın:
@@ -152,7 +214,7 @@ Oluşturulan SSH anahtarını GitHub hesabınıza eklemek için aşağıdaki ad�
 - "New SSH key" butonuna tıklayın.
 - Anahtarınızı "Title" kutusuna yapıştırın ve ardından "Add SSH key" butonuna tıklayın.
 
-**4. SSH Bağlantısını Test Etme:**
+##### SSH Connetion Test
 SSH bağlantısının doğru yapılandırıldığını test etmek için aşağıdaki komutu çalıştırın:
 
 ```sh
@@ -161,14 +223,14 @@ ssh -T git@github.com
 
 Eğer her şey doğru yapılandırılmışsa, bir hoş geldiniz mesajı alırsınız.
 
-### Adım 6: Sistem Temizleme ve Bakım
+##### System Repair And Clean
 Son olarak, sistemdeki gereksiz dosyaları temizlemek için Homebrew'un temizlik komutunu çalıştırabilirsiniz:
 
 ```sh
 brew cleanup
 ```
 
-**2. Python Kurulumu:**
+#### Python Setup
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/121px-Python-logo-notext.svg.png" align="left" height="120" width="120">
 
@@ -179,13 +241,16 @@ brew install python
 ```
 <br><br>
 
-**2.1. Python Kurulumu:**
-	•	Python ve pip’in yüklü olduğunu doğrulamak için aşağıdaki komutları çalıştırın:
+##### Python Pip And Flask Setup Steps
+
+•	Python ve pip’in yüklü olduğunu doğrulamak için aşağıdaki komutları çalıştırın:
+
 ```sh
 python3 --version
 pip3 --version
 ```
 •	Proje dizinine gidin ve aşağıdaki komutu çalıştırarak sanal bir ortam oluşturun:
+
 ```sh
 python3 -m venv venv
 ```
@@ -209,7 +274,7 @@ pip install Flask-SQLAlchemy
 pip install Flask-WTF
 ```
 
-**3. Node.js ve npm Kurulumu:**
+#### Node.js And Npm Setup
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" align="left" height="120" width="200">
 
 ```sh
@@ -217,7 +282,23 @@ brew install node
 ```
 <br><br>
 
-**4. Visual Studio Code Kurulumu:**
+#### R Setup
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png?20240131042527" align="left" height="120" width="120">
+
+```sh
+brew install r
+```
+<br><br>
+
+#### Julia Setup
+<img src="https://www.svgrepo.com/show/376330/julia.svg" align="left" height="120" width="120">
+
+```sh
+brew install --cask julia
+```
+<br><br>
+
+#### Visual Studio Code Setup
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" align="left" height="120" width="120">
 
 ```sh
@@ -225,13 +306,14 @@ brew install --cask visual-studio-code
 ```
 <br><br>
 
-## VS Code
+
+##### VS Code Settings And Extensions 
 
 VS Code is my preferred code editor.
 
 You can view all of my VS Code settings / extensions [here](https://github.com/CodingGarden/vscode-settings).
 
-**5. Java Kurulumu:**
+#### Java Setup
 <img src="https://res.cloudinary.com/lwgatsby/f_auto/www/uploads/2020/08/openjdklogo.082620.png" align="left" height="120" width="120">
 
 ```sh
@@ -239,7 +321,7 @@ brew install openjdk
 ```
 <br><br>
 
-**6. Brave Tarayıcısı Kurulumu:**
+#### Brave Browser Setup
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Brave_lion.png/220px-Brave_lion.png" align="left" height="120" width="120">
 
 ```sh
@@ -247,18 +329,24 @@ brew install --cask brave-browser
 ```
 <br><br>
 
-**7. Raycast Kurulumu:** : Spotligth Muadili.
+#### Spotify Setup
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1024px-Spotify_icon.svg.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask spotify
+```
+<br><br>
+
+#### Raycast Setup
 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Raycast_App_Icon.png/120px-Raycast_App_Icon.png" align="left" height="120" width="120">
 
 ```sh
 brew install --cask raycast
 ```
+- Extensions > Window Management > Add Hotkeys 
 <br><br>
 
-**7.1. Raycast Kurulumu:** : Masa Üstü İçin Pencere Yöneticisi
-- Extensions > Window Management > Add Hotkeys 
-
-**9. WhatsApp Kurulumu:**
+#### WhatsApp Desktop Setup
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/120px-WhatsApp.svg.png" align="left" height="120" width="120">
 
 ```sh
@@ -266,7 +354,7 @@ brew install --cask whatsapp
 ```
 <br><br>
 
-**10. Zoom Kurulumu:**
+#### Zoom Setup
 <img src="https://logowik.com/content/uploads/images/zoom-icon8997.jpg" align="left" height="120" width="150">
 
 ```sh
@@ -274,7 +362,7 @@ brew install --cask zoom
 ```
 <br><br>
 
-**11. Slack Kurulumu:**
+#### Slack Setup
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png" align="left" height="120" width="120">
 
 ```sh
@@ -282,7 +370,7 @@ brew install --cask slack
 ```
 <br><br>
 
-**12. Discord Kurulumu:**
+#### Discord Setup
 <img src="https://upload.wikimedia.org/wikipedia/tr/5/57/Discord_logo_old.png" align="left" height="120" width="120">
 
 ```sh
@@ -290,7 +378,7 @@ brew install --cask discord
 ```
 <br><br>
 
-**13. Xcode Kurulumu:**
+#### Xcode Setup
 <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Xcode_14_icon.png" align="left" height="120" width="120">
 
 ```sh
@@ -298,7 +386,7 @@ brew install --cask xcode
 ```
 <br><br>
 
-**14. FreeDownload Manager Kurulumu:**
+#### FreeDownload Manager Setup
 <img src="https://www.wintotal.de/media/2009/04/Free-Download-Manager-01-120x120.png" align="left" height="120" width="120">
 
 ```sh
@@ -306,7 +394,7 @@ brew install --cask free-download-manager
 ```
 <br><br>
 
-**15. Monitor Control Kurulumu:**
+#### Monitor Control Setup
 <img src="https://github.com/MonitorControl/MonitorControl/raw/main/.github/Icon-cropped.png" align="left" height="120" width="120">
 
 ```sh
@@ -314,7 +402,7 @@ brew install --cask monitorcontrol
 ```
 <br><br>
 
-**16. Alt-Tab Kurulumu:**
+#### Alt Tab Setup
 <img src="https://alt-tab-macos.netlify.app/public/android-chrome-256x256.png" align="left" height="120" width="120">
 
 ```sh
@@ -322,7 +410,7 @@ brew install --cask alt-tab
 ```
 <br><br>
 
-**17. Al Dente Kurulumu:**
+#### Al Dente Setup
 <img src="https://apphousekitchen.com/wp-content/uploads/2021/03/aldenteproicon-300x300.png" align="left" height="120" width="120">
 
 ```sh
@@ -330,23 +418,7 @@ brew install --cask aldente
 ```
 <br><br>
 
-**18. Chat Gpt Kurulumu:**
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/130px-ChatGPT_logo.svg.png" align="left" height="120" width="120">
-
-```sh
-https://persistent.oaistatic.com/sidekick/public/ChatGPT_Desktop_public_latest.dmg
-```
-<br><br>
-
-**19. Hand Mirror Kurulumu:**
-<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/08/fd/64/08fd645b-bfd1-7a83-2ea9-038231f11ad5/AppIcon-0-0-85-220-0-0-4-0-2x-P3.png/230x0w.webp" align="left" height="120" width="120">
-
-```sh
-https://apps.apple.com/us/app/hand-mirror/id1502839586?mt=12
-```
-<br><br>
-
-**20. KDE Live Kurulumu:**
+#### KDE Live Setup
 <img src="https://kdenlive.org/wp-content/uploads/2024/05/2405.png" align="left" height="120" width="120">
 
 ```sh
@@ -354,7 +426,7 @@ brew install --cask kdenlive
 ```
 <br><br>
 
-**21. Audacity Kurulumu:**
+#### Audacity Setup
 <img src="https://www.audacityteam.org/_astro/Audacity_Logo.63b57726.svg" align="left" height="120" width="120">
 
 ```sh
@@ -362,7 +434,7 @@ brew install --cask audacity
 ```
 <br><br>
 
-**22. Libre Office Kurulumu:**
+#### Libre Office Setup
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/LibreOffice_6.1_Calc_Icon.svg/512px-LibreOffice_6.1_Calc_Icon.svg.png" align="left" height="120" width="120">
 
 ```sh
@@ -370,7 +442,7 @@ brew install --cask libreoffice
 ```
 <br><br>
 
-**23. Android File Trasfer Kurulumu:**
+#### Android File Trasfer Setup
 <img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/android-file-transfer-icon.png" align="left" height="120" width="120">
 
 ```sh
@@ -378,7 +450,7 @@ brew install --cask android-file-transfer
 ```
 <br><br>
 
-**24. Keeping You Awake Kurulumu:**
+#### Keeping You Awake Setup
 <img src="https://keepingyouawake.app/icon.png" align="left" height="120" width="120">
 
 ```sh
@@ -386,7 +458,7 @@ brew install --cask keepingyouawake
 ```
 <br><br>
 
-**25. VLC Player Kurulumu:**
+#### VLC Player Setup
 <img src="https://cdn1.iconfinder.com/data/icons/metro-ui-dock-icon-set--icons-by-dakirby/512/VLC_Media_Player.png" align="left" height="120" width="120">
 
 ```sh
@@ -394,7 +466,7 @@ brew install --cask vlc
 ```
 <br><br>
 
-**26. Keka Kurulumu:**
+#### Keka Setup
 <img src="https://www.keka.io/img/Keka-Square-512x512.png" align="left" height="120" width="120">
 
 ```sh
@@ -402,7 +474,7 @@ brew install --cask keka
 ```
 <br><br>
 
-**27. Kap Kurulumu:**
+#### Kap Screen Recorder Setup
 <img src="https://getkap.co/static/favicon/icon-256.png" align="left" height="120" width="120">
 
 ```sh
@@ -410,7 +482,7 @@ brew install --cask kap
 ```
 <br><br>
 
-**28. Figma Kurulumu:**
+#### Figma Setup
 <img src="https://banner2.cleanpng.com/20180614/tjk/kisspng-figma-designer-computer-icons-material-design-5b2244f198c236.1471924315289725296257.jpg" align="left" height="120" width="120">
 
 ```sh
@@ -418,6 +490,13 @@ brew install --cask figma
 ```
 <br><br>
 
+#### Hand Mirror Webcam Helper Setup
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/08/fd/64/08fd645b-bfd1-7a83-2ea9-038231f11ad5/AppIcon-0-0-85-220-0-0-4-0-2x-P3.png/230x0w.webp" align="left" height="120" width="120">
+
+```sh
+https://apps.apple.com/us/app/hand-mirror/id1502839586?mt=12
+```
+<br><br>
 
 #### Other command line tools I use
 
@@ -429,16 +508,14 @@ brew install ffmpeg
 brew install imagemagick
 ```
 
-### Adım 1: iTerm2 Kurulumu
+#### iTerm2 Terminal Setup
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/ITerm2_v3.4_icon.png" align="left" height="120" width="120">
 <br>
 
 ```sh
 brew install --cask iterm2
 ```
-<br>
-
-## Terminal
+<br><br>
 
 I prefer [iTerm2](https://iterm2.com/) because:
 * Lots of customization options
@@ -448,11 +525,6 @@ I prefer [iTerm2](https://iterm2.com/) because:
 There are a lot of options for a terminal replacement, but I've been using iTerm2 for years and it works great for my needs.
 
 Checkout their documentation for more info on what iTerm2 can do: [https://iterm2.com/documentation.html](https://iterm2.com/documentation.html)
-
-
-```
-brew install iterm2
-```
 
 Once installed, launch it and customize the settings / preferences to your liking. These are my preferred settings:
 
@@ -471,14 +543,14 @@ Once installed, launch it and customize the settings / preferences to your likin
       * Keys -> Key Mappings -> Presets -> Natural Text Editing
           * This allows me to use the [keyboard shortcuts](https://gist.github.com/w3cj/022081eda22081b82c52) I know and love inside of iTerm2
 
-### Adım 2: Zsh Kurulumu
+#### Zsh Setup
 Zsh, macOS ile birlikte gelir, ancak en son sürümü kullanmak için yine de Homebrew ile yükleyebilirsiniz:
 
 ```sh
 brew install zsh
 ```
 
-### Adım 3: Zsh'i Varsayılan Kabuk Olarak Ayarlama
+#### Make ZSH Default Shell
 Zsh'i varsayılan kabuk (shell) olarak ayarlayın:
 
 ```sh
@@ -491,8 +563,9 @@ Bu komut çalışmazsa, aşağıdaki komutu deneyin:
 chsh -s $(which zsh)
 ```
 
-### Adım 4: Oh My Zsh Kurulumu
+#### Oh My Zsh Setup
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Oh_My_Zsh_logo.png" align="left" height="120" width="200">
+
 Oh My Zsh'ı kurmak için aşağıdaki komutu çalıştırın:
 
 ```sh
@@ -500,13 +573,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ```
 <br>
 
-### Adım 5: iTerm2 ile Zsh ve Oh My Zsh Kullanımı
+- iTerm2 ile Zsh ve Oh My Zsh Kullanımı
 iTerm2'yi açın ve Zsh'in varsayılan kabuk olarak kullanıldığını doğrulayın. Eğer doğru şekilde kurulduysa, Oh My Zsh temasını ve eklentilerini kullanmaya başlayabilirsiniz.
 
-Tabii ki! Powerlevel10k, Zsh için oldukça popüler ve özelleştirilebilir bir tema. Hem performanslı hem de göz alıcı bir terminal deneyimi sunar. Aşağıda Powerlevel10k temasının nasıl kurulacağına dair adım adım rehberi bulabilirsiniz.
-
-### Adım 6: Powerlevel10k Temasının Kurulumu
-
+#### Powerlevel10k Theme Setup
 **1. Powerlevel10k'yı Klonlayın:**
 
 ```sh
@@ -521,39 +591,28 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
 
-### Adım 7: Değişiklikleri Uygulama
+**3. Değişiklikleri Uygulama**
 
 Zsh kabuğunu yeniden yükleyin:
 
 ```sh
 source ~/.zshrc
 ```
+- Powerlevel10k Yapılandırma Sihirbazını Çalıştırma : Terminalinizi yeniden başlattığınızda veya Zsh'ı yeniden yüklediğinizde, Powerlevel10k yapılandırma sihirbazı otomatik olarak başlayacaktır. Bu sihirbaz, temayı özelleştirmenize ve tercihlerinizi ayarlamanıza yardımcı olacaktır. Sihirbazı adım adım takip ederek kişisel tercihlerinizi belirleyin.
 
-### Adım 8: Powerlevel10k Yapılandırma Sihirbazını Çalıştırma
+#### ZSH Eklentileri
 
-Terminalinizi yeniden başlattığınızda veya Zsh'ı yeniden yüklediğinizde, Powerlevel10k yapılandırma sihirbazı otomatik olarak başlayacaktır. Bu sihirbaz, temayı özelleştirmenize ve tercihlerinizi ayarlamanıza yardımcı olacaktır. Sihirbazı adım adım takip ederek kişisel tercihlerinizi belirleyin.
-
-### Adım 9: Powerlevel10k Eklentileri ve Özellikleri
-
-Powerlevel10k, birçok özelleştirme ve özellik sunar. İşte bazı örnekler:
-
-**1. Renk Şemaları:**
-
-```sh
-p10k configure
-```
-
-## ZSH Eklentileri
-
-### Adım 1: Eklenti Dizinine Göz Atma
-Öncelikle, Oh My Zsh'ın varsayılan olarak hangi eklentileri sağladığını görmek için eklenti dizinine göz atabilirsiniz. Bu dizin genellikle `~/.oh-my-zsh/plugins` konumunda bulunur.
+- Eklenti Dizinine Göz Atma : Öncelikle, Oh My Zsh'ın varsayılan olarak hangi eklentileri sağladığını görmek için eklenti dizinine göz atabilirsiniz. Bu dizin genellikle `~/.oh-my-zsh/plugins` konumunda bulunur.
 
 ```sh
 ls ~/.oh-my-zsh/plugins
 ```
 
-### Adım 2: Eklenti Eklemek
-Eklentileri etkinleştirmek için `~/.zshrc` dosyasını düzenlemeniz gerekiyor. Terminalde aşağıdaki komutu kullanarak `~/.zshrc` dosyasını açın:
+- Eklenti Eklemek : Eklentileri etkinleştirmek için `~/.zshrc` dosyasını düzenlemeniz gerekiyor. Terminalde aşağıdaki komutu kullanarak `~/.zshrc` dosyasını açın:
+
+Open VS code in ~/.zshrc location. 
+
+or 
 
 ```sh
 nano ~/.zshrc
@@ -565,8 +624,7 @@ Eklentileri etkinleştirmek için `plugins` dizisini bulun. Örneğin, `git` ve 
 plugins=(git z)
 ```
 
-### Adım 3: Yeni Eklentiler Kurma
-Varsayılan olarak sağlanmayan bir eklentiyi kurmak için, ilgili eklentiyi `~/.oh-my-zsh/custom/plugins` dizinine klonlamanız gerekir.
+- Yeni Eklentiler Kurma : Varsayılan olarak sağlanmayan bir eklentiyi kurmak için, ilgili eklentiyi `~/.oh-my-zsh/custom/plugins` dizinine klonlamanız gerekir.
 
 Örneğin, `zsh-syntax-highlighting` eklentisini kurmak için:
 
@@ -580,15 +638,11 @@ Kurulumdan sonra, `~/.zshrc` dosyasını açın ve yeni eklentiyi `plugins` dizi
 plugins=(git zsh-syntax-highlighting)
 ```
 
-### Adım 4: Değişiklikleri Uygulama
-`~/.zshrc` dosyasındaki değişiklikleri uygulamak için Zsh kabuğunu yeniden yükleyin:
+- Değişiklikleri Uygulama : `~/.zshrc` dosyasındaki değişiklikleri uygulamak için Zsh kabuğunu yeniden yükleyin:
 
 ```sh
 source ~/.zshrc
 ```
-
-### Popüler Oh My Zsh Eklentileri
-İşte bazı popüler Oh My Zsh eklentileri ve kurulumları:
 
 ### 1. zsh-autosuggestions
 **Açıklama:** Önceki komutlarınızdan otomatik tamamlama önerileri sunar.
@@ -804,4 +858,11 @@ git clone https://github.com/hchbaw/peco ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plug
 **~/.zshrc dosyasına ekleyin:**
 ```sh
 plugins=(peco)
+```
+
+#### System Repair And Clean
+Son olarak, sistemdeki gereksiz dosyaları temizlemek için Homebrew'un temizlik komutunu çalıştırabilirsiniz:
+
+```sh
+brew cleanup
 ```
