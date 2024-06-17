@@ -94,8 +94,8 @@ I don't like the new Desktop, Stage Manager or Widget features in Sonoma, so I d
   * Desktop & Dock
     * Desktop & Stage Manager
       * Show Items
-        * On Desktop -> uncheck
-        * In Stage Manager -> uncheck
+        * On Desktop -> check
+        * In Stage Manager -> check
       * Click wallpaper to reveal desktop -> Only in Stage Manager
       * Stage Manager -> uncheck
       * Widgets
@@ -129,6 +129,14 @@ I don't use the Dock at all. It takes up screen space, and I can use RayCast to 
     * Animate opening applications -> No
     * Show suggested and recent apps in the Dock -> No
 
+### Other Settings
+
+* Accessibility
+  * Display
+    * Reduce Transparrency -> Yes
+* Trackpad
+  * Scrool & Zoom -> Natural Scrolling -> No 
+
 ### Dock Speed Up Settings
 
 - Speed Up
@@ -155,7 +163,8 @@ killall Dock
 <br>
 
 ### Home Brew PATH Settings
-Homebrew kurulumundan sonra, PATH değişkeninizi güncellemeniz gerekebilir. Bunun için aşağıdaki komutu girin:
+Homebrew kurulumundan sonra, PATH değişkeninizi güncellemeniz gerekebilir. Terminal ekrarınında da aynı kod bulunacaktır. Öncelik onu yazınız. 
+Bulamazsanız eğer aşağıdaki komutu girin:
 
 ```sh
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
@@ -321,6 +330,7 @@ You can view all of my VS Code settings / extensions [here](https://github.com/C
 ```sh
 brew install openjdk
 ```
+- Console add 2 difrent code for make program paths.
 <br><br>
 
 #### Brave Browser Setup
@@ -384,7 +394,7 @@ brew install --cask discord
 <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Xcode_14_icon.png" align="left" height="120" width="120">
 
 ```sh
-brew install --cask xcode
+brew install --cask xcodes
 ```
 <br><br>
 
@@ -540,46 +550,27 @@ I prefer [iTerm2](https://iterm2.com/) because:
 * Clickable links
 * Native OS notifications
 
-There are a lot of options for a terminal replacement, but I've been using iTerm2 for years and it works great for my needs.
-
-Checkout their documentation for more info on what iTerm2 can do: [https://iterm2.com/documentation.html](https://iterm2.com/documentation.html)
-
 Once installed, launch it and customize the settings / preferences to your liking. These are my preferred settings:
 
+
+* [Fonts, What you wish.](https://www.nerdfonts.com/font-downloads)
 * Appearance
   * Theme
     * Minimal
+    * Tabbar Location -> Bottom
+    * Status Bar Location -> Bottom
 * Profiles
   * Default
       * General -> Working Directory -> Reuse previous session's directory
-      * Colors -> Basic Colors -> Foreground -> Lime Green
-      * Text -> Font -> Anonymous Pro
-          * You can download this font [here](https://www.marksimonson.com/fonts/view/anonymous-pro).
-          * I use this font in VS Code as well
-      * Text -> Font Size -> 36
-          * I use my Macbook to present / teach, so a big font size is important so everyone can see the commands I'm typing
+      * Color Presets -> High Contrast
+      * Text -> Font -> Your Choise From NerdFonts for icons.
       * Keys -> Key Mappings -> Presets -> Natural Text Editing
-          * This allows me to use the [keyboard shortcuts](https://gist.github.com/w3cj/022081eda22081b82c52) I know and love inside of iTerm2
+      * Window -> Style -> Full Height Rigth of Screen
+* Keys 
+  * Hotkey
+      * Show / Hide all windows hotkey -> Checked
+      * Setup Hotkey
 
-#### Zsh Setup
-Zsh, macOS ile birlikte gelir, ancak en son sürümü kullanmak için yine de Homebrew ile yükleyebilirsiniz:
-
-```sh
-brew install zsh
-```
-
-#### Make ZSH Default Shell
-Zsh'i varsayılan kabuk (shell) olarak ayarlayın:
-
-```sh
-chsh -s /bin/zsh
-```
-
-Bu komut çalışmazsa, aşağıdaki komutu deneyin:
-
-```sh
-chsh -s $(which zsh)
-```
 
 #### Oh My Zsh Setup
 <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Oh_My_Zsh_logo.png" align="left" height="120" width="200">
@@ -724,15 +715,15 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ${ZSH_CUSTOM
 plugins=(zsh-history-substring-search)
 ```
 
-### 7. zsh-nvm
-**Açıklama:** Node.js versiyon yöneticisi nvm için Zsh desteği sağlar.
+### 7. Colorls
+**Açıklama:** Listeleri klasörlü simgelerle göstermeye yarar. 
 **Kurulum:**
 ```sh
-git clone https://github.com/lukechilds/zsh-nvm ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-nvm
+sudo gem install colorls
 ```
-**~/.zshrc dosyasına ekleyin:**
+**~/.zshrc dosyasınnın sonuna ekleyin:**
 ```sh
-plugins=(zsh-nvm)
+alias ls='colorls'
 ```
 
 ### 8. zsh-interactive-cd
@@ -766,116 +757,6 @@ brew install autojump
 **~/.zshrc dosyasına ekleyin:**
 ```sh
 plugins=(autojump)
-```
-
-### 11. zsh-dirhistory
-**Açıklama:** Dizin geçmişini kaydeder ve geri dönmenizi sağlar.
-**Kurulum:**
-```sh
-git clone https://github.com/tymm/zsh-directory-history ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-directory-history
-```
-**~/.zshrc dosyasına ekleyin:**
-```sh
-plugins=(zsh-directory-history)
-```
-
-### 12. zsh-extract
-**Açıklama:** Dosya arşivlerini kolayca açmanızı sağlar.
-**Kurulum:**
-```sh
-git clone https://github.com/specht/zsh-extract ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-extract
-```
-**~/.zshrc dosyasına ekleyin:**
-```sh
-plugins=(zsh-extract)
-```
-
-### 13. zsh-navigation-tools
-**Açıklama:** Klasörlerde ve dosyalarda gezinmeyi kolaylaştırır.
-**Kurulum:**
-```sh
-git clone https://github.com/psprint/zsh-navigation-tools ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-navigation-tools
-```
-**~/.zshrc dosyasına ekleyin:**
-```sh
-plugins=(zsh-navigation-tools)
-```
-
-### 14. zsh-vi-mode
-**Açıklama:** Zsh için vi tarzı mod sağlar.
-**Kurulum:**
-```sh
-git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode
-```
-**~/.zshrc dosyasına ekleyin:**
-```sh
-plugins=(zsh-vi-mode)
-```
-
-### 15. zsh-you-should-use
-**Açıklama:** Daha önce kullandığınız komutları hatırlatır ve yeniden kullanmanızı önerir.
-**Kurulum:**
-```sh
-git clone https://github.com/MichaelAquilina/zsh-you-should-use ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/you-should-use
-```
-**~/.zshrc dosyasına ekleyin:**
-```sh
-plugins=(you-should-use)
-```
-
-### 16. zsh-prompt-benchmark
-**Açıklama:** Komut satırının performansını ölçer ve raporlar.
-**Kurulum:**
-```sh
-git clone https://github.com/romkatv/zsh-prompt-benchmark ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-prompt-benchmark
-```
-**~/.zshrc dosyasına ekleyin:**
-```sh
-plugins=(zsh-prompt-benchmark)
-```
-
-### 17. zsh-auto-notify
-**Açıklama:** Uzun süren komutlar tamamlandığında bildirim gönderir.
-**Kurulum:**
-```sh
-git clone https://github.com/MichaelAquilina/zsh-auto-notify ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/auto-notify
-```
-**~/.zshrc dosyasına ekleyin:**
-```sh
-plugins=(auto-notify)
-```
-
-### 18. zsh-apple-touchbar
-**Açıklama:** Apple Touch Bar üzerinde özel kısayollar ve komutlar oluşturur.
-**Kurulum:**
-```sh
-git clone https://github.com/zsh-users/zsh-apple-touchbar ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-apple-touchbar
-```
-**~/.zshrc dosyasına ekleyin:**
-```sh
-plugins=(zsh-apple-touchbar)
-```
-
-### 19. zsh-histdb
-**Açıklama:** Komut geçmişinizi SQLite veritabanına kaydeder ve sorgulamanızı sağlar.
-**Kurulum:**
-```sh
-git clone https://github.com/larkery/zsh-histdb ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-histdb
-```
-**~/.zshrc dosyasına ekleyin:**
-```sh
-plugins=(zsh-histdb)
-```
-
-### 20. zsh-peco
-**Açıklama:** Komut geçmişinizde arama yapmanızı sağlar ve seçim yapmanıza olanak tanır.
-**Kurulum:**
-```sh
-git clone https://github.com/hchbaw/peco ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/peco
-```
-**~/.zshrc dosyasına ekleyin:**
-```sh
-plugins=(peco)
 ```
 
 #### System Repair And Clean
