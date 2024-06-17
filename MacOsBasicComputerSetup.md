@@ -50,6 +50,8 @@
     - [Keka Setup](#keka-setup)
     - [Kap Screen Recorder Setup](#kap-screen-recorder-setup)
     - [Figma Setup](#figma-setup)
+    - [Steam Setup](#steam-setup)
+    - [EpicGames Setup](#epicgames-setup)
     - [Hand Mirror Webcam Helper Setup](#hand-mirror-webcam-helper-setup)
     - [Other command line tools I use](#other-command-line-tools-i-use)
     - [iTerm2 Terminal Setup](#iterm2-terminal-setup)
@@ -487,6 +489,22 @@ brew install --cask kap
 
 ```sh
 brew install --cask figma
+```
+<br><br>
+
+#### Steam Setup
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" align="left" height="120" width="120">
+
+```sh
+brew install --cask steam
+```
+<br><br>
+
+#### EpicGames Setup
+<img src="https://logos-world.net/wp-content/uploads/2021/12/Epic-Games-Logo-700x394.png" align="left" height="120" width="200">
+
+```sh
+brew install --cask epic-games
 ```
 <br><br>
 
