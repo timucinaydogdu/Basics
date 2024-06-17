@@ -233,6 +233,11 @@ ssh -T git@github.com
 ```
 
 Eğer her şey doğru yapılandırılmışsa, bir hoş geldiniz mesajı alırsınız.
+Eğer git push origin main kısmında hata alırsanız. 
+
+- Github -> Settings -> Personel Token (Classic)-> Add name and Expiration Date -> Check All -> Generate Token
+  Terminal in push folder. Write this code. 
+  - git remote set-url origin https://Your-token-number-paste-it@github.com/username/reponame
 
 ##### System Repair And Clean
 Son olarak, sistemdeki gereksiz dosyaları temizlemek için Homebrew'un temizlik komutunu çalıştırabilirsiniz:
