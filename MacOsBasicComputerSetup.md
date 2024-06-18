@@ -435,6 +435,14 @@ brew install --cask aldente
 ```
 <br><br>
 
+#### Obs Setup
+<img src="https://obsproject.com/assets/images/new_icon_small-r.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask obs
+```
+<br><br>
+
 #### KDE Live Setup
 <img src="https://kdenlive.org/wp-content/uploads/2024/05/2405.png" align="left" height="120" width="120">
 
