@@ -325,9 +325,7 @@ brew install --cask visual-studio-code
 
 ##### VS Code Settings And Extensions 
 
-VS Code is my preferred code editor.
-
-You can view all of my VS Code settings / extensions [here](https://github.com/CodingGarden/vscode-settings).
+- VS Code Terminal Font Fix -> Vs Code -> Settings -> Terminal.integrated.font -> 'Your Nerd  Font'
 
 #### Java Setup
 <img src="https://res.cloudinary.com/lwgatsby/f_auto/www/uploads/2020/08/openjdklogo.082620.png" align="left" height="120" width="120">
