@@ -1,4 +1,5 @@
 ## MacOs Clean Setup
+**Açıklama:** Yazılım geliştirme ilgilenmek ugraşmak ve hatalarla ugraşmak istemiyorsanız. İlk önce işletim sisteminizi ingilizce kurun. 
 <img src="https://developer.apple.com/macos/images/lockup-hero-large_2x.png" >
 
 ### Route Steps : Mac Settings 
@@ -247,9 +248,9 @@ brew cleanup
 ```
 
 #### Python Setup
+**Açıklama:** Python programa dilinin kurulumu.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/121px-Python-logo-notext.svg.png" align="left" height="120" width="120">
-
 <br>
 
 ```sh
@@ -258,6 +259,7 @@ brew install python
 <br><br>
 
 ##### Python Pip And Flask Setup Steps
+**Açıklama:** Python temelli flask çalışma ortamının kurulumu. 
 
 •	Python ve pip’in yüklü olduğunu doğrulamak için aşağıdaki komutları çalıştırın:
 
@@ -291,6 +293,8 @@ pip install Flask-WTF
 ```
 
 #### Node.js And Npm Setup
+**Açıklama:** Node js kurulumu.
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png" align="left" height="120" width="200">
 
 ```sh
@@ -299,6 +303,8 @@ brew install node
 <br><br>
 
 #### R Setup
+**Açıklama:** R Programlama dilinin kurulumu. (Makine Öğrenmesi)
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/724px-R_logo.svg.png?20240131042527" align="left" height="120" width="120">
 
 ```sh
@@ -307,6 +313,8 @@ brew install r
 <br><br>
 
 #### Julia Setup
+**Açıklama:** Julia Programlama dilinin kurulumu. (Makine Öğrenmesi)
+
 <img src="https://www.svgrepo.com/show/376330/julia.svg" align="left" height="120" width="120">
 
 ```sh
@@ -315,6 +323,8 @@ brew install --cask julia
 <br><br>
 
 #### Visual Studio Code Setup
+**Açıklama:** VSC IDE kurulumu.
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1200px-Visual_Studio_Code_1.35_icon.svg.png" align="left" height="120" width="120">
 
 ```sh
@@ -324,10 +334,13 @@ brew install --cask visual-studio-code
 
 
 ##### VS Code Settings And Extensions 
+**Açıklama:** VS üzerindeki terminalde ohmyzhs eklentilerini ve görsellerini çalıştırma.
+
 
 - VS Code Terminal Font Fix -> Vs Code -> Settings -> Terminal.integrated.font -> 'Your Nerd  Font'
 
 #### Java Setup
+**Açıklama:** Java kurulumu. Kurulum esnasında terminal kodları arasında 2 adet progman path yollarını eklememizi isteyen kod var. Atlanmamalı.
 <img src="https://res.cloudinary.com/lwgatsby/f_auto/www/uploads/2020/08/openjdklogo.082620.png" align="left" height="120" width="120">
 
 ```sh
@@ -337,6 +350,8 @@ brew install openjdk
 <br><br>
 
 #### Brave Browser Setup
+**Açıklama:** Brave Web Tarayıcı kurulumu. Block Chainle sync yapılırsa tüm ayarlarınız otomatik gelir. 
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Brave_lion.png/220px-Brave_lion.png" align="left" height="120" width="120">
 
 ```sh
@@ -345,6 +360,8 @@ brew install --cask brave-browser
 <br><br>
 
 #### Spotify Setup
+**Açıklama:** Müzik çalar kurulumu.
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1024px-Spotify_icon.svg.png" align="left" height="120" width="120">
 
 ```sh
@@ -353,6 +370,8 @@ brew install --cask spotify
 <br><br>
 
 #### Raycast Setup
+**Açıklama:** SpotLigth alternatifi bir başlatıcı kurulumu. İçinde eklenti olarak window managemed var. Eklenti olarak youtube downloader var. 
+
 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Raycast_App_Icon.png/120px-Raycast_App_Icon.png" align="left" height="120" width="120">
 
 ```sh
@@ -362,6 +381,8 @@ brew install --cask raycast
 <br><br>
 
 #### WhatsApp Desktop Setup
+**Açıklama:** Telefonla masaüstü mesajlaşma yardımcısı kurulumu.
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/120px-WhatsApp.svg.png" align="left" height="120" width="120">
 
 ```sh
@@ -370,6 +391,8 @@ brew install --cask whatsapp
 <br><br>
 
 #### Zoom Setup
+**Açıklama:** Zoom desktop kurulumu.
+
 <img src="https://logowik.com/content/uploads/images/zoom-icon8997.jpg" align="left" height="120" width="150">
 
 ```sh
@@ -378,6 +401,8 @@ brew install --cask zoom
 <br><br>
 
 #### Slack Setup
+**Açıklama:** Slack mesajlaşma uygulaması kurulumu.
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/2048px-Slack_icon_2019.svg.png" align="left" height="120" width="120">
 
 ```sh
@@ -386,6 +411,8 @@ brew install --cask slack
 <br><br>
 
 #### Discord Setup
+**Açıklama:** Discord mesajlaşma uygulaması kurulumu.
+
 <img src="https://upload.wikimedia.org/wikipedia/tr/5/57/Discord_logo_old.png" align="left" height="120" width="120">
 
 ```sh
@@ -394,6 +421,7 @@ brew install --cask discord
 <br><br>
 
 #### Xcode Setup
+**Açıklama:** Xcode farklı versiyonları indirme aralarında geçiş yapmayı sağlayan program. 
 <img src="https://upload.wikimedia.org/wikipedia/en/5/56/Xcode_14_icon.png" align="left" height="120" width="120">
 
 ```sh
@@ -402,6 +430,8 @@ brew install --cask xcodes
 <br><br>
 
 #### FreeDownload Manager Setup
+**Açıklama:** Dosya indirme yöneticisi, torrent dosyalarını da indirmeyi destekliyor. 
+
 <img src="https://www.wintotal.de/media/2009/04/Free-Download-Manager-01-120x120.png" align="left" height="120" width="120">
 
 ```sh
@@ -410,6 +440,8 @@ brew install --cask free-download-manager
 <br><br>
 
 #### Monitor Control Setup
+**Açıklama:** Monitör parlarlık kontrolü için kullanılan bir eklenti. 
+
 <img src="https://github.com/MonitorControl/MonitorControl/raw/main/.github/Icon-cropped.png" align="left" height="120" width="120">
 
 ```sh
@@ -418,6 +450,8 @@ brew install --cask monitorcontrol
 <br><br>
 
 #### Alt Tab Setup
+**Açıklama:** Windows tarzı uygulamalar arası geçisi destekleyen bir eklenti. 
+
 <img src="https://alt-tab-macos.netlify.app/public/android-chrome-256x256.png" align="left" height="120" width="120">
 
 ```sh
@@ -425,7 +459,19 @@ brew install --cask alt-tab
 ```
 <br><br>
 
+#### Mac Mouse Fix
+**Açıklama:** Mac Mause ayarlarını değiştirebildiğimiz eklenti yapabildiğimiz bir yardımcı program. 
+
+<img src="https://macmousefix.com/_ipx/w_225&q_100/mmf-icon.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask mac-mouse-fix
+```
+<br><br>
+
 #### Al Dente Setup
+**Açıklama:** Laptoplar için bir batarya yöneticisi programı. 
+
 <img src="https://apphousekitchen.com/wp-content/uploads/2021/03/aldenteproicon-300x300.png" align="left" height="120" width="120">
 
 ```sh
@@ -434,6 +480,7 @@ brew install --cask aldente
 <br><br>
 
 #### Obs Setup
+**Açıklama:** Canlı yayın veya kayıt yapılabilecek bir kayıt programı.
 <img src="https://obsproject.com/assets/images/new_icon_small-r.png" align="left" height="120" width="120">
 
 ```sh
@@ -442,6 +489,8 @@ brew install --cask obs
 <br><br>
 
 #### KDE Live Setup
+**Açıklama:** Video düzenleme programı. 
+
 <img src="https://kdenlive.org/wp-content/uploads/2024/05/2405.png" align="left" height="120" width="120">
 
 ```sh
@@ -450,6 +499,8 @@ brew install --cask kdenlive
 <br><br>
 
 #### Audacity Setup
+**Açıklama:** Ses düzenleme programı. 
+
 <img src="https://www.audacityteam.org/_astro/Audacity_Logo.63b57726.svg" align="left" height="120" width="120">
 
 ```sh
@@ -458,6 +509,8 @@ brew install --cask audacity
 <br><br>
 
 #### Libre Office Setup
+**Açıklama:** Ofis programları kurulumu. 
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/LibreOffice_6.1_Calc_Icon.svg/512px-LibreOffice_6.1_Calc_Icon.svg.png" align="left" height="120" width="120">
 
 ```sh
@@ -466,6 +519,8 @@ brew install --cask libreoffice
 <br><br>
 
 #### Android File Trasfer Setup
+**Açıklama:** Android telefonlardan mac üzerine bağlamayı sağlayan bir eklenti programı. 
+
 <img src="https://icons.iconarchive.com/icons/papirus-team/papirus-apps/256/android-file-transfer-icon.png" align="left" height="120" width="120">
 
 ```sh
@@ -474,6 +529,8 @@ brew install --cask android-file-transfer
 <br><br>
 
 #### Keeping You Awake Setup
+**Açıklama:** Bilgisayarın uykuya geçmesini engelleyen bir eklenti. 
+
 <img src="https://keepingyouawake.app/icon.png" align="left" height="120" width="120">
 
 ```sh
@@ -482,6 +539,8 @@ brew install --cask keepingyouawake
 <br><br>
 
 #### VLC Player Setup
+**Açıklama:** Video izleme programı ve video formatları arasında dönüştürme yapabilir.
+
 <img src="https://cdn1.iconfinder.com/data/icons/metro-ui-dock-icon-set--icons-by-dakirby/512/VLC_Media_Player.png" align="left" height="120" width="120">
 
 ```sh
@@ -490,6 +549,8 @@ brew install --cask vlc
 <br><br>
 
 #### Keka Setup
+**Açıklama:** Zip programı dosyaları sıkıştırabilir ve açabilir. 
+
 <img src="https://www.keka.io/img/Keka-Square-512x512.png" align="left" height="120" width="120">
 
 ```sh
@@ -498,6 +559,8 @@ brew install --cask keka
 <br><br>
 
 #### Kap Screen Recorder Setup
+**Açıklama:** Masa üstü ekran kayıt programı.
+
 <img src="https://getkap.co/static/favicon/icon-256.png" align="left" height="120" width="120">
 
 ```sh
@@ -506,6 +569,8 @@ brew install --cask kap
 <br><br>
 
 #### Figma Setup
+**Açıklama:** Tasaramı ve protatip oluşturma aracı. 
+
 <img src="https://banner2.cleanpng.com/20180614/tjk/kisspng-figma-designer-computer-icons-material-design-5b2244f198c236.1471924315289725296257.jpg" align="left" height="120" width="120">
 
 ```sh
@@ -514,6 +579,8 @@ brew install --cask figma
 <br><br>
 
 #### Steam Setup
+**Açıklama:** Oyun kütüphanesi. 
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" align="left" height="120" width="120">
 
 ```sh
@@ -522,6 +589,8 @@ brew install --cask steam
 <br><br>
 
 #### EpicGames Setup
+**Açıklama:** Oyun kütüphanesi. 
+
 <img src="https://logos-world.net/wp-content/uploads/2021/12/Epic-Games-Logo-700x394.png" align="left" height="120" width="200">
 
 ```sh
@@ -530,10 +599,32 @@ brew install --cask epic-games
 <br><br>
 
 #### Hand Mirror Webcam Helper Setup
+**Açıklama:** Toplantı öncesi kamera görselini kontrol etme eklenti aracı. 
+
 <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/08/fd/64/08fd645b-bfd1-7a83-2ea9-038231f11ad5/AppIcon-0-0-85-220-0-0-4-0-2x-P3.png/230x0w.webp" align="left" height="120" width="120">
 
 ```sh
 https://apps.apple.com/us/app/hand-mirror/id1502839586?mt=12
+```
+<br><br>
+
+#### One Thing
+**Açıklama:** Hedef belirleme konsantirasyon eklentisi.
+
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/df/e0/43/dfe043d3-ff4d-6edf-9912-f7859dc1db65/AppIcon-0-0-85-220-0-4-0-2x.png/230x0w.webp" align="left" height="120" width="120">
+
+```sh
+https://apps.apple.com/us/app/one-thing/id1604176982?mt=12
+```
+<br><br>
+
+#### Expenses 
+**Açıklama:** Harcama takip programı. 
+
+<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/cd/fe/4f/cdfe4fb0-5d26-7ae6-c822-249a22ac3957/AppIcon-2x_U007euniversal-0-0-0-4-0-0-85-220-0.png/230x0w.webp" align="left" height="120" width="120">
+
+```sh
+https://apps.apple.com/us/app/expenses-spending-tracker/id1492055171?ign-itscg=30200&ign-itsct=apps_box_link
 ```
 <br><br>
 
@@ -548,6 +639,8 @@ brew install imagemagick
 ```
 
 #### iTerm2 Terminal Setup
+**Açıklama:** Mac terminale alternatif güclü bir kisileştirme yapısına sahip ve eklentiler ile güçlenebilmektedir. 
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/ITerm2_v3.4_icon.png" align="left" height="120" width="120">
 <br>
 
