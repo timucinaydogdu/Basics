@@ -568,6 +568,26 @@ brew install --cask kap
 ```
 <br><br>
 
+#### VMwareFusion Setup
+**Açıklama:** Sanal işletim sistemi arayüz programı. 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/VMware_Fusion_Logo.png?20150508091423" align="left" height="120" width="120">
+
+```sh
+brew install --cask vmware-fusion
+```
+<br><br>
+
+#### Bitwarden Setup
+**Açıklama:** Şifre yöneticisi. 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Bitwarden_logo.svg/120px-Bitwarden_logo.svg.png" align="left" height="76" width="120">
+
+```sh
+brew install bitwarden
+```
+<br><br>
+
 #### Figma Setup
 **Açıklama:** Tasaramı ve protatip oluşturma aracı. 
 
