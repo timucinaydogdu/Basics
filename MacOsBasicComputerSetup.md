@@ -246,6 +246,15 @@ Son olarak, sistemdeki gereksiz dosyaları temizlemek için Homebrew'un temizlik
 ```sh
 brew cleanup
 ```
+#### Source Tree Setup
+**Açıklama:** Git arayüz kullanımı için ek program.
+
+<img src="https://wac-cdn.atlassian.com/dam/jcr:2f7db492-c688-401b-93cf-70215edeade5/Sourcetree%20ios%20app%20icon%20beta%20shadow%20red.svg?cdnVersion=1881" align="left" height="120" width="120">
+
+```sh
+brew install --cask sourcetree
+```
+<br><br>
 
 #### Python Setup
 **Açıklama:** Python programa dilinin kurulumu.
