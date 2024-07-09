@@ -348,6 +348,7 @@ brew install --cask visual-studio-code
 
 - VS Code Terminal Font Fix -> Vs Code -> Settings -> Terminal.integrated.font -> 'Your Nerd  Font'
 
+
 #### Java Setup
 **Açıklama:** Java kurulumu. Kurulum esnasında terminal kodları arasında 2 adet progman path yollarını eklememizi isteyen kod var. Atlanmamalı.
 <img src="https://res.cloudinary.com/lwgatsby/f_auto/www/uploads/2020/08/openjdklogo.082620.png" align="left" height="120" width="120">
@@ -365,6 +366,16 @@ brew install openjdk
 
 ```sh
 brew install --cask brave-browser
+```
+<br><br>
+
+#### Rain Drop IO Setup
+**Açıklama:** Bookmark ve not alma uygulaması.
+
+<img src="https://raindrop.io/_next/static/images/logotype-60-73ba67bc4d66d42ef20d908a2e0c5322.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask raindropio
 ```
 <br><br>
 
