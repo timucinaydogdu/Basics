@@ -86,19 +86,19 @@ Color.primary ve secondry -> İki yada dafa fazla renk şemalı yapılarda renk 
 
 
 
-```sh
+```swift
     text("Merhaba Dünya !")                 # . text'e ait özellikleri listeler
 
-        .font(.headline)                    # Font değişliği yapar. Özellik yerine fonsiyona benzer.
-        .foreground(.red)                   # Font rengini değiştirir.
-        .bold()                             # Yazıyı kalınlaştırır.
-        .italic()                           # Yazıyı italic yapar. 
-        .multilineTextAlignment(.center)    # Çok satırlı yazıyı ortalar.
-        .kerning(10)                        # Yazı karakterleri arasında 10 piksel oluşturur.
+        .font(.headline)                    // Font değişliği yapar. Özellik yerine fonsiyona benzer.
+        .foreground(.red)                   // Font rengini değiştirir.
+        .bold()                             // Yazıyı kalınlaştırır.
+        .italic()                           // Yazıyı italic yapar. 
+        .multilineTextAlignment(.center)    // Çok satırlı yazıyı ortalar.
+        .kerning(10)                        // Yazı karakterleri arasında 10 piksel oluşturur.
         .frame(width:250, height:150, aligment:Aligment.center)
-                                            # Yazıyı bir çerçeveye alır ve yazıyı ortalar. 
-        .minimimScaleFactor(1.0)            # Yazıyı ölçeklendirme için kullanılır. 
-        .capitalized                        # Metnin arkasına özellik olarak eklenir. 
+                                            // Yazıyı bir çerçeveye alır ve yazıyı ortalar. 
+        .minimimScaleFactor(1.0)            // Yazıyı ölçeklendirme için kullanılır. 
+        .capitalized                        // Metnin arkasına özellik olarak eklenir. 
 ```
 
 ### Shape Bileşenleri Ve Özellikleri ;
@@ -116,29 +116,242 @@ Color.primary ve secondry -> İki yada dafa fazla renk şemalı yapılarda renk 
 - Asset 
     - ekle ->  Color Set -> Attribulet Panel -> 8 bit Hex
 
-```sh
+```swift
 
     .foregroundColor(Color("CustomColor"))
     .shadow(color:Color.red, radius:10.0,x:0, y:0)
 
 ```
 
-```sh
-    circle().fill(color.red)                # Çember oluştur ve rengini kırmızı yap. 
-    .foregroundColor(.green)                # Rengini yeşil yap. 
-    .stroke(Color.blue, lineWidth:10.0)     # Çemberin çevre kalınlığını mavi yapar ve kalınlığını ayarlar.. 
-    .stroke(style:StrokeStyle(lineWidth:10, lineCap: .butt,dash: [10]))         
-    .trim(from:0.0, to 1.0)                 # Çizimden parça koparmak için kullanılır. 
-    .frame(width:200, height :100)          # Çerçeveye göre şekli ayarlamaya yarar. 
+```swift
+
+    circle().fill(color.red)                    // Çember oluştur ve rengini kırmızı yap. 
+        .foregroundColor(.green)                //Rengini yeşil yap. 
+        .stroke(Color.blue, lineWidth:10.0)     // Çemberin çevre kalınlığını mavi yapar ve kalınlığını ayarlar.. 
+        .stroke(style:StrokeStyle(lineWidth:10, lineCap: .butt,dash: [10]))         
+        .trim(from:0.0, to 1.0)                 // Çizimden parça koparmak için kullanılır. 
+        .frame(width:200, height :100)          // Çerçeveye göre şekli ayarlamaya yarar. 
     
 ```
 - UI Color Değeriyle Renk Atama
 
-```sh
+```swift
 
     var uiColor = UIColor(red:1.0, green:1.0, blue:1.0, alpha:1.0)
 
     circle()
         .foreground(uiColor)
         .fill(Color.init(uiColor: uicolor))
+```
+
+### Gradient Bileşenleri Ve Özellikleri ;
+
+- Uygulanacak yapıya göre nesnelere renk doygunluğu verilebilir. 
+
+```swift
+
+    RoundedRectangle(cornerRadius: 10)
+        .fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .bottomLeading, endPoint: .topTrailing))
+        .fill(RadialGradient(colors: [.red,.blue], center: .center, startRadius: 10, endRadius: 100))
+        .fill(AngularGradient(colors: [.red,.yellow,.green], center: .bottom, angle: .zero))
+        .frame(width: 300.0,height: 200.0)
+
+```
+
+### Image Bileşeni Kullanarak Icon ve Resim Ekleme ve Özellikleri ;
+
+- Uygulanacak uygulamaya göre SF Sembols den icon eklenebilir. Resimler ise assets içine eklenerek add ile çağırılır. 
+
+```swift
+// Icon yapısı ve özellikleri. 
+
+    Image(systemName: "heart")
+        .font(.system(size: 300))
+        .resizable()
+        .aspectRatio(contentMode: .fill)
+        .foregroundColor(.red)
+        .frame(width: 300,height: 300)
+        .clipped()
+        .background(.black)                
+
+// Image yapısı ve özelikleri. 
+
+
+    Image("123")
+        .resizable()
+        .cornerRadius(10)
+        .clipShape(Circle())
+    
+    AsyncImage(url: URL(string: "https://picsum.photos/256")) { image in image
+        .image?
+        .resizable()
+        .frame(width: 500,height: 200)
+        .scaledToFit()
+        .clipped()
+    }
+
+
+```
+
+### Hizalama Bileşenleri ve Özellikleri ;
+
+- Belli bir çerçeve üzerinde katmanlar oluşturma ve hizalama işlemleri. 
+
+```swift
+// Frame ve Aligment
+
+    Text("Selam Dünya")
+        .foregroundColor(.black)
+        .background(.yellow)
+        .frame(height: 100, alignment: .bottom) // Bir sonraki frame içinde hareket eder.
+        .background(.green)
+        .frame(height: 200, alignment: .top)
+        .background(.teal)
+        .frame(width: 300, alignment: .leading)
+        .background(.brown)
+        .frame(maxWidth: .infinity,maxHeight: .infinity,alignment: .topTrailing)
+        .background(.blue)
+```
+
+### Background ve Overlay Bileşenleri ve Özellikleri ;
+
+- Katmanlar üzerinde işlemler.
+
+```swift
+// Like göstergesi.
+
+Image(systemName: "heart.fill")
+    .font(.largeTitle)
+    .foregroundColor(.white)
+    .background(
+        Circle()
+            .fill (LinearGradient(colors: [.red,.pink], startPoint: .bottomTrailing, endPoint: .topLeading))
+            .frame(width: 150,height: 150)
+            .shadow(color: .pink, radius: 10,x: 0,y: 10)
+            .overlay(
+                Circle()
+                    .fill(.purple)
+                    .frame(width: 50,height: 50)
+                    .overlay(
+                        Text("10")
+                            .foregroundColor(.white)
+                                    
+                    ),alignment: .topTrailing
+            )
+    )
+// Kutu yerleşimi.
+
+    Rectangle()
+        .frame(width: 200,height: 200)
+        .overlay(
+            Rectangle()
+                .fill(.red)
+                .frame(width: 50,height: 50),alignment: .topLeading)
+                .background(
+                    Rectangle()
+                        .fill(.orange)
+                        .frame(width: 250,height: 250),alignment: .bottomTrailing
+                )
+    Rectangle()
+        .frame(width: 200,height: 200)
+        .overlay(
+            Rectangle()
+                .fill(.red)
+                .frame(width: 50,height: 50),alignment: .bottomLeading)
+                .background(
+                    Rectangle()
+                        .fill(.orange)
+                        .frame(width: 250,height: 250),alignment: .topTrailing
+                )       
+```
+
+### Stack Yapıları İle Bileşen Ekleme
+
+- Dikey, yatay ve üst üste bileşenleri eklememize yarayan yapı. 
+
+```swift
+// Vertical-Horizontal-Z Stack
+
+    ZStack(alignment: .top) {
+
+        Rectangle()
+            .fill(.red)
+            .frame(width: 150,height: 150)
+        VStack(alignment: .leading, spacing: 20) {
+                    
+            Rectangle()
+                .fill(.pink)
+                .frame(width: 30,height: 30)
+            Rectangle()
+                .fill(.blue)
+                .frame(width: 30,height: 30)
+            HStack{
+                Rectangle()
+                    .fill(.orange)
+                    .frame(width: 30,height: 30)
+                Rectangle()
+                    .fill(.orange)
+                    .frame(width: 30,height: 30)
+            }
+            .background(.cyan)
+        }
+        .background()
+    }
+
+```
+
+### Padding Yapıları Ve Kullanımları
+
+- Dinamik olarak farklı cihazlarda da düğru çalışmasını sağlayan boşluk ayarlaması yapan bileşen. Paddingler alt alta yazıldıklarında eklenme özelliği gösterir. 
+
+```swift
+// Padding Kullanımı.
+
+    VStack (alignment : .leading){
+        Text("Merhaba Dünya !")
+            .font(.largeTitle)
+            .fontWeight(.semibold)
+            .padding(.bottom,20)
+        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+    }
+    .padding()
+    .padding(.vertical,10)
+    .background(
+        Color.white
+            .cornerRadius(10)
+            .shadow(color: .black.opacity(0.3), radius: 10,x: 0,y: 10)
+    )
+    .padding(.horizontal,10)
+
+```
+
+### Spacer Yapıları Ve Kullanımları
+
+- Spacer kullanımı ve yapıları.
+
+```swift
+// Spacer Kullanımı.
+
+    HStack{
+        Spacer()
+            .frame(height: 10)
+            .background(.yellow)
+        Rectangle()
+            .frame(width: 50,height: 50)
+            .foregroundColor(.red)
+            
+        Spacer(minLength: 30) // En düşük uzunluk değeri.
+            .frame(height: 10)
+            .background(.black)
+            
+        Rectangle()
+            .frame(width: 50,height: 50)
+            .foregroundColor(.blue)
+        Spacer()
+            .frame(height: 10)
+            .background(.green)
+    }
+    .background(.orange)
+    .padding(200)
+
 ```
