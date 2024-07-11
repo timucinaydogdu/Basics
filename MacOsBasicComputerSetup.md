@@ -348,6 +348,34 @@ brew install --cask visual-studio-code
 
 - VS Code Terminal Font Fix -> Vs Code -> Settings -> Terminal.integrated.font -> 'Your Nerd  Font'
 
+## MySQL Setup
+**Açıklama:** Docker ve Azure Data studio Üzerinden Kurulum. İki uygulamayı kurduktan sonra ; <br><br>
+Terminal üzerinden iki komut çalıştırılacak ; <br> 
+- Dikkat edilecek nokta ikinci kodda sadece Test123456 şifresi değiştiriilebilir. 8 Karakter olmalıdır. 
+```sh
+docker pull mcr.microsoft.com/azure-sql-edge
+``` 
+<br>
+
+```sh
+docker run -e "ACCEPT_EULA=1" -e "MSSQL_SA_PASSWORD=Test123456" -e "MSSQL_PID=Developer" -e "MSSQL_USER=SA" -p 1433:1433 -d --name=sql mcr.microsoft.com/azure-sql-edge
+
+```
+
+#### Docker Setup
+<img src="https://www.ibm.com/content/dam/adobe-cms/instana/media_logo/Docker.component.complex-narrative-xl.ts=1689294851916.png/content/adobe-cms/us/en/products/instana/supported-technologies/docker-monitoring/jcr:content/root/table_of_contents/body/content_section_styled/content-section-body/complex_narrative/logoimage" align="left" height="120" width="200">
+
+```sh
+brew install --cask docker
+```
+<br><br>
+#### Azura Data Studio Setup
+<img src="https://user-images.githubusercontent.com/10014944/136142919-9862b62f-3036-40fe-a380-b86fe005c27e.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask azure-data-studio
+```
+<br><br>
 
 #### Java Setup
 **Açıklama:** Java kurulumu. Kurulum esnasında terminal kodları arasında 2 adet progman path yollarını eklememizi isteyen kod var. Atlanmamalı.
