@@ -354,7 +354,7 @@ Terminal üzerinden iki komut çalıştırılacak ; <br>
 - Dikkat edilecek nokta ikinci kodda sadece Test123456 şifresi değiştiriilebilir. 8 Karakter olmalıdır. 
 ```sh
 docker pull mcr.microsoft.com/azure-sql-edge
-``` 
+```
 <br>
 
 ```sh
@@ -474,6 +474,15 @@ brew install --cask discord
 
 ```sh
 brew install --cask xcodes
+```
+<br><br>
+
+#### X Code SF-Symbols Setup
+**Açıklama:** Xcode kullanılmak için kullanılan bir sembol kütüphanesi. 
+<img src="https://developer.apple.com/assets/elements/icons/sf-symbols-beta/sf-symbols-beta-96x96_2x.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask sf-symbols
 ```
 <br><br>
 

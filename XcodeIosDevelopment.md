@@ -73,11 +73,13 @@ Run Project Button
 
 ​	Command + Sol Click -> Jump To Definition Location (Tanımlama noktasına gider)
 
+​	Command + Shift + L -> Kütüphaneyi (Library Views) açar.
+
 ​	Command + Shift + K -> Derleme klasörünü temizler.
 
 ​	Command + B -> Projeyi build eder. 
 
-- Show Build Times Command: Termila Code
+- Show Build Times Command: Terminal Code
 
 ```sh
 defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
@@ -125,6 +127,7 @@ Bileşenleri dikey olarak alt alta yada üst üste yığılmasını sağlayan ya
 
         .minimimScaleFactor(1.0) // Yazıyı ölçeklendirme için kullanılır. 
         .capitalized             // Metnin arkasına özellik olarak eklenir. 
+				.edgesIgnoringSafeArea(.all) 	// Tüm erkan ilgili görselle kaplanır.
 		
 		Button(action:{ print("Tıklandı")}, label:{ Text("Benim Buttonum")}) // Buton ekleme.
 		
