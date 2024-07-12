@@ -24,15 +24,17 @@
    ```
 
 5. **git status**: Depo durumunu kontrol eder.
+   
    ```sh
    git status
    ```
-
+   
 6. **git push**: Değişiklikleri uzak depoya gönderir.
+   
    ```sh
    git push origin main
    ```
-
+   
 7. **git pull**: Uzak depodan değişiklikleri alır.
    ```sh
    git pull origin main

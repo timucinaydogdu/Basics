@@ -1,29 +1,8 @@
 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Xcode_14_icon.png/120px-Xcode_14_icon.png" align="left" >
 
-
 ## Xcode Ayarları Ve Kullanım Notları
-<br>
-**Açıklama:** Xcode da bilinmesi gereken ayarlar ve notlar. 
-<br><br><br>
 
-#### Proje Oluşturma
-* Create New Project 
-    - MultiPlatform
-    - İOS
-    - MacOS
-    - TvOs
-        * Next
-        - ProjectName
-        - Team
-        - OrganizationIdentifier
-        - Interface
-        - Language 
-            * Next
-            - Save Location
-            - File Name
-            - Github Repository
-                * Create
-                    * Hello New Project Screen
+## **Açıklama:** Xcode da bilinmesi gereken ayarlar ve notlar. 
 
 #### Xcode Arayüzü
 
@@ -64,6 +43,12 @@ Run Project Button
 
 ###### Merkez Editor Panel
 - Show Library (Ek Araçlar)
+  - View Library
+  - Modifiers Library
+  - Snippets Library
+  - Media Library
+  - Color Library
+
 - Tab Panel
 - Editor Panel
 - Similasyon Panel
@@ -77,28 +62,75 @@ Run Project Button
 
 ##  Kullanım Notları
 
-### Text Bileşenleri Ve Özellikleri ;
-<p>
-//          -> Yorum satırı için kullanılır. <br>
-Commend + ? -> Seçilen satırları toplu olarak yorum satırı yapar.<br>
-Color.primary ve secondry -> İki yada dafa fazla renk şemalı yapılarda renk yapılandırmasını kolay şekilde değiştirmeye yarar. 
-<br></p>
+### Kısayollar Ve Uygulama Notları ;
+//          -> Yorum satırı için kullanılır. 
 
+/*
+  -> Çoklu yorum satırında kullanılır. 
+*/ 
+
+ 	Command + ? -> Seçilen satırları toplu olarak yorum satırı olarak kapatır açar.
+
+​	Command + Sol Click -> Jump To Definition Location (Tanımlama noktasına gider)
+
+​	Command + Shift + K -> Derleme klasörünü temizler.
+
+​	Command + B -> Projeyi build eder. 
+
+- Show Build Times Command: Termila Code
+
+```sh
+defaults write com.apple.dt.Xcode ShowBuildOperationDuration -bool YES
+```
+
+​	Command + N -> SwiftUI View  // Arayüz eklenmesi, tekrarlanan kodlardan sadeleştirmek için kullanılan yapı.
+
+​	Command + Control + E -> Aynı isimlendirmeleri toplu şekilde değiştirmek için kullanılır.
+
+​	Control + Shift + Click -> Çoklu satıra yazı ekleme.
+
+​	Control + I -> Kodun girinti boşluklarını düzenler. 
+
+​	Hold - Option -> Dikey çoklu satır seçimi ve düzenleme.
+
+
+
+## Yığın Yapısı
+
+-  VStack -> Bileşenleri dikey olarak alt alta yada üst üste gelecek şekilde yığın olarak kullanılır. 
+- HStack -> Bileşenleri yatay olarak yan yana  gelecek şekilde yığın olarak kullanılır.
+- ZStack -> Bileşenleri üst üste ekleyenecek şekilde yığın olarak kullanılır. 
+
+Bileşenleri dikey olarak alt alta yada üst üste yığılmasını sağlayan yapıdır. 
 
 
 ```swift
-    text("Merhaba Dünya !")                 # . text'e ait özellikleri listeler
+    text("Merhaba Dünya !")      // . text'e ait özellikleri listeler
 
-        .font(.headline)                    // Font değişliği yapar. Özellik yerine fonsiyona benzer.
-        .foreground(.red)                   // Font rengini değiştirir.
-        .bold()                             // Yazıyı kalınlaştırır.
-        .italic()                           // Yazıyı italic yapar. 
+        .font(.headline)         // Font değişliği yapar. Özellik yerine fonsiyona benzer.
+        .foreground(.red)        // Font rengini değiştirir.
+        .bold()                  // Yazıyı kalınlaştırır.
+        .italic()                // Yazıyı italic yapar. 
         .multilineTextAlignment(.center)    // Çok satırlı yazıyı ortalar.
-        .kerning(10)                        // Yazı karakterleri arasında 10 piksel oluşturur.
+        .kerning(10)             // Yazı karakterleri arasında 10 piksel oluşturur.
         .frame(width:250, height:150, aligment:Aligment.center)
-                                            // Yazıyı bir çerçeveye alır ve yazıyı ortalar. 
-        .minimimScaleFactor(1.0)            // Yazıyı ölçeklendirme için kullanılır. 
-        .capitalized                        // Metnin arkasına özellik olarak eklenir. 
+                                 // Yazıyı bir çerçeveye alır ve yazıyı ortalar. 
+		Image("istanbul")						 // Resmin en boy oranını korumak için kullanılan yapı.
+				.resizable()
+				.aspectRatio(contentMode:.fit)
+				.frame(width: UIScreen.main.bounds.width * 0.8, heigth: UIScreen.main.bounds.heigth * 0.3, aligment:.center)					 // Farklı cihazlarda ekranlarda uyum sağlamak için ayarlama.
+				.clipShape(Circle())		 // Resimin şekle göre kırpma işlemini yapar.
+				.overlay(Circle()				 // Şekil üzerine katman yada yazı eklemesi yapar. 
+                .stroke(Color.purple,lineWidth:4))
+
+        .minimimScaleFactor(1.0) // Yazıyı ölçeklendirme için kullanılır. 
+        .capitalized             // Metnin arkasına özellik olarak eklenir. 
+		
+		Button(action:{ print("Tıklandı")}, label:{ Text("Benim Buttonum")}) // Buton ekleme.
+		
+		NavigationView{							 // Viewler arası geçiş yapmaya yarar.
+		NavigationLink( destination: <SwiftUI Görünüme Adı>(), label:{ Text("Başkabir görünüm.")})										 
+    }.navigationTitle(Text("AnaGörüme Gider"))
 ```
 
 ### Shape Bileşenleri Ve Özellikleri ;
