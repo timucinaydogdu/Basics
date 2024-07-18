@@ -428,6 +428,17 @@ brew install --cask raycast
 - Extensions > Window Management > Add Hotkeys 
 <br><br>
 
+#### OnlySwitch Setup
+**Açıklama:** Toplu görev yöneticisi
+
+<img src="https://github.com/jacklandrin/OnlySwitch/raw/main/OnlySwitch/Assets.xcassets/AppIcon.appiconset/icon_256x256@2x.png?raw=true" align="left" height="120" width="120">
+
+```sh
+brew install only-switch
+```
+
+<br><br>
+
 #### WhatsApp Desktop Setup
 **Açıklama:** Telefonla masaüstü mesajlaşma yardımcısı kurulumu.
 
