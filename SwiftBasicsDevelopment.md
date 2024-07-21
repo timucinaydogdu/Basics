@@ -336,6 +336,81 @@ while count < 10 {      // Sayaç 10 dan küçük olma koşulu olduğu sürece d
 ##  ENUM Kullanımı (OOP)
 
 ```swift
+// ENUM Tanımlanması
+
+var person = Person(name: "Cemil", surName:"Kaya", age: 32, jobDesk: .sekreter)
+                            // Init tanımlaması ve Enum çağırılımı
+
+enum jobDescription {       // Belirli seçenekler arasında veri kullanımı yapısı olarak kullanılır.
+    
+    case Mudur
+    case sofor
+    case caycı
+    case ahcı
+    case sekreter
+}
+
+class Person {
+    var name    : String
+    var surName : String
+    var age     : Int
+    var jobDesk : jobDescription
+    
+    
+    init(name: String, surName: String, age: Int, jobDesk: jobDescription) {
+        self.name = name
+        self.surName = surName
+        self.age = age
+        self.jobDesk = jobDesk
+    }
+}
+
+print("Kayıtlı kişi : \(person.name+person.surName). Yaşı \(person.age). İşi : \(person.jobDesk) ")
+
+```
+
+##  Inherit Kullanımı (OOP)
+
+```swift
+// Inherit (OOP)
+
+var person = Person(name: "Cuma", surName: "Aziz", age : 30 )
+
+class Person {
+    var name    : String
+    var surName : String
+    var age     : Int
+    
+    init(name: String, surName: String, age: Int) {
+        self.name = name
+        self.surName = surName
+        self.age = age
+    }
+    
+    func welcomePerson (){              // Class içinde fonksiyon oluşumu. 
+        print("Welcome Person")
+    }
+}
+
+print(person.name)
+print(person.welcomePerson())
+
+var superPerson = SuperPerson(name: "Bekir", surName: "Hayati", age: 22)
+                            
+
+class SuperPerson : Person{             // Person classından miras alınarak oluşturulan class.
+    
+    override func welcomePerson() {     // Fonsiyon override ile genişletebilinir.
+        print("Welcome to SuperPerson")
+    }
+    
+}
+
+print(superPerson.name)                 // SuperPerson Class üzerinde birşey yazılı olmasa bile
+                                        // miras yoluyla person classı üzerindeki tamlamalara erişim sağladı.
+
+print(superPerson.welcomePerson())      // Override ile fonksiyon genişletebilinir.
+print(person.welcomePerson())
 
 
 ```
