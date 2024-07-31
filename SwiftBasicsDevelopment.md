@@ -411,6 +411,74 @@ print(superPerson.name)                 // SuperPerson Class üzerinde birşey y
 
 print(superPerson.welcomePerson())      // Override ile fonksiyon genişletebilinir.
 print(person.welcomePerson())
+```
 
+##  Stuct Kullanımı (OOP)
 
+```swift
+// Stuct Kullanımı(OOP)
+
+    // Class Tanımlaması
+class Person {
+    var userName    : String
+    var userAge     : Int
+    
+    init(userName: String, userAge: Int) {
+        self.userName = userName
+        self.userAge = userAge
+    }
+}
+
+var person = Person(userName: "Ahmet", userAge: 45)
+
+print(person.userName)
+
+    // Struct Tanımlaması
+struct Animal {
+    var name    : String    // Structlar Inherit yapılamaz. Inherit olması istenirse classa dönüştürülmelidir.
+    var age     : Int       // Herhangi bir init tanımlaması yapılmasına geerek yoktur.
+}                           // Değer ataması yapılırken. Değer eklenir.
+
+var animal = Animal(name: "Peter", age: 22)
+                            
+print(animal.name)
+```
+
+##  Mutating Fuction Kullanımı (OOP)
+
+```swift
+// Mutating Fuction Kullanımı
+
+class Foo {
+    var count : Int
+    
+    init(count: Int) {
+        self.count = count
+    }
+    
+    func arttir(){
+        count += 1
+    }
+}
+
+struct Map {                // Struct altındaki fonksiyondan içinden üst değişken değerini
+                            // değiştirildiğinde alınan hatadan mutation fonc ile giderilir.
+    var count : Int
+    
+    mutating func artttir() {
+        count += 1
+    }
+
+}
+
+var foo = Foo(count: 20)
+var map = Map(count: 30)
+
+print(foo.count)
+foo.arttir()
+print(foo.count)
+
+print(map.count)
+map.artttir()
+print(map.count)
 ```

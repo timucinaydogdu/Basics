@@ -417,27 +417,6 @@ brew install --cask spotify
 ```
 <br><br>
 
-#### Raycast Setup
-**Açıklama:** SpotLigth alternatifi bir başlatıcı kurulumu. İçinde eklenti olarak window managemed var. Eklenti olarak youtube downloader var. 
-
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Raycast_App_Icon.png/120px-Raycast_App_Icon.png" align="left" height="120" width="120">
-
-```sh
-brew install --cask raycast
-```
-- Extensions > Window Management > Add Hotkeys 
-<br><br>
-
-#### OnlySwitch Setup
-**Açıklama:** Toplu görev yöneticisi
-
-<img src="https://github.com/jacklandrin/OnlySwitch/raw/main/OnlySwitch/Assets.xcassets/AppIcon.appiconset/icon_256x256@2x.png?raw=true" align="left" height="120" width="120">
-
-```sh
-brew install only-switch
-```
-
-<br><br>
 
 #### WhatsApp Desktop Setup
 **Açıklama:** Telefonla masaüstü mesajlaşma yardımcısı kurulumu.
@@ -504,16 +483,6 @@ brew install --cask sf-symbols
 
 ```sh
 brew install --cask free-download-manager
-```
-<br><br>
-
-#### Monitor Control Setup
-**Açıklama:** Monitör parlarlık kontrolü için kullanılan bir eklenti. 
-
-<img src="https://github.com/MonitorControl/MonitorControl/raw/main/.github/Icon-cropped.png" align="left" height="120" width="120">
-
-```sh
-brew install --cask monitorcontrol
 ```
 <br><br>
 
@@ -606,6 +575,16 @@ brew install --cask keepingyouawake
 ```
 <br><br>
 
+#### Rectangle Setup
+**Açıklama:** Pencere yöneticisi. 
+
+<img src="https://rectangleapp.com/assets/pro/images/mac512pts1x.png" align="left" height="120" width="120">
+
+```sh
+brew install --cask rectangle
+```
+<br><br>
+
 #### VLC Player Setup
 **Açıklama:** Video izleme programı ve video formatları arasında dönüştürme yapabilir.
 
@@ -683,6 +662,27 @@ brew install --cask steam
 
 ```sh
 brew install --cask epic-games
+```
+<br><br>
+
+
+#### Key Castr Setup
+**Açıklama:** Klavyeden basılan tuşu gösteren program. 
+
+<img src="https://github.com/keycastr/keycastr/raw/main/assets/KeyCastr_header.png" align="left" height="120" width="150">
+
+```sh
+brew install --cask keycastr
+```
+<br><br>
+
+#### Bettir Display Setup
+**Açıklama:** Harici ekranların kontrolü için program. 
+
+<img src="https://private-user-images.githubusercontent.com/37590873/252763361-d0c7e3c2-07c4-45de-9fca-60441281a548.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjIzOTM3NzksIm5iZiI6MTcyMjM5MzQ3OSwicGF0aCI6Ii8zNzU5MDg3My8yNTI3NjMzNjEtZDBjN2UzYzItMDdjNC00NWRlLTlmY2EtNjA0NDEyODFhNTQ4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA3MzElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNzMxVDAyMzc1OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTFmZTY4N2FjZTUzNTJiNmViN2VjMTZlMzU5ZmM5MmI0ZTUzMmU2OTAyNjJiODEwZTA0OGJiNDFkMWQ5NDUzMDImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.D9Gggx2t0ashsTs-nM2ihgctUjI4mBOT8EzUih3SvNM" align="left" height="120" width="120">
+
+```sh
+brew install --cask betterdisplay
 ```
 <br><br>
 
